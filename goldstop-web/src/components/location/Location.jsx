@@ -9,7 +9,7 @@ const Location = () => {
         <h2>Contact Us</h2> {/* Title */}
         <div className='info-subsect'>
           <p>(604) 734-7477</p> {/* Subtitle */}
-          <p>goldshoes@repairman.com</p> {/* Subtitle */}
+          <p>goldstoprepair@gmail.com</p> {/* Subtitle */}
         </div>
         <div className='info-subsect'>
           <p>3308 Dunbar Street</p> {/* Subtitle */}
