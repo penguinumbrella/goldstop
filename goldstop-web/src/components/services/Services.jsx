@@ -39,7 +39,7 @@ const Services = () => {
             <p>Knives, scissors, and gardening tools</p>
         </div>
       </div>
-      <button className="see-more">See More Services</button>
+      {/* <button className="see-more">See More Services</button> */}
     </div>
   );
 }

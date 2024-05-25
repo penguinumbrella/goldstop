@@ -19,7 +19,7 @@ const Navbar = () => {
         </a>
       </div>
       <div className="navbar-quote">
-        <button>Get a Quote</button>
+        {/* <button>Get a Quote</button> */}
       </div>
     </div>
   );

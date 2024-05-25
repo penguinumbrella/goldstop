@@ -18,7 +18,8 @@ const Location = () => {
         <div className='info-subsect'>
           <p>Hours: Tuesday - Saturday 9:30AM  - 5:30PM </p> {/* Subtitle */}
         </div>
-        <button className="get-in-touch">GET IN TOUCH</button> {/* Button */}
+        
+        { /* <button className="get-in-touch">GET IN TOUCH</button> */} {/* Button */}
       </div>
     </div>
   );
