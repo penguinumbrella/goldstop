@@ -17,8 +17,8 @@
   background-color: #393939;
   
   h2 {
-    margin-left: 20px;
-    font-size: 50px;
+    margin-left: 2vw; /* Convert margin to viewport units */
+    font-size: 3vw; /* Convert font size to viewport units */
     text-align: left;
     color: white;
   }
@@ -30,29 +30,29 @@
 
     .service {
       color: white;
-      width: calc(20% - 10px); /* 50% width with some margin */
-      border-radius: 8px;
-      padding: 20px;
-      margin-bottom: 20px;
+      width: calc(20vw - 1vw); /* 20% width with some margin in vw */
+      border-radius: 2vw; /* Convert border-radius to viewport units */
+      padding: 2vw; /* Convert padding to viewport units */
+      margin-bottom: 2vw; /* Convert margin to viewport units */
       
       h3 {
-        font-size: 25px;
+        font-size: 2vw; /* Convert font size to viewport units */
       }
     }
   }
 
   .see-more {
-    margin-left: 20px;
+    margin-left: 2vw; /* Convert margin to viewport units */
     color: black;
-    width: 300px;
-    height: 100px;
-    font-size: 30px;
-    padding: 10px 20px;
+    width: 25vw;
+    height: 15vh; /* Convert height to viewport units */
+    font-size: 2vw; /* Convert font size to viewport units */
+    padding: 2vh 4vw; /* Convert padding to viewport units */
     background-color: rgb(255, 200, 0);
     border: none;
-    border-radius: 50px;
+    border-radius: 10vw; /* Convert border-radius to viewport units */
     cursor: pointer;
-    margin-bottom: 50px;
+    margin-bottom: 10vh; /* Convert margin to viewport units */
   }
 
   .see-more:hover {
