@@ -49,7 +49,7 @@ const Services = ({ onTabClick }) => {
             <p>Knives and scissors</p>
         </div>
       </div>
-      {<button className="see-more" onClick={(event) => handleTabClick('services', event)}>See More Services</button>}
+      {/* <button className="see-more" onClick={(event) => handleTabClick('services', event)}>See More Services</button> */}
     </div>
   );
 }
