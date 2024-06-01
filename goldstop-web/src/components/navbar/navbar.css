@@ -1,3 +1,18 @@
+/* Define the fade-in keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to the navbar and its child elements */
+.navbar, .navbar-name, .navbar-tabs a, .navbar-social a, .navbar-quote .quote-button {
+  animation: fadeIn 1s ease-in-out; /* 1s duration, ease-in-out timing function */
+}
+
 .navbar {
   width: 100%;
   height: 10vh; /* Adjust the height as needed, vh is viewport height */
