@@ -1,0 +1,15 @@
+/* Define the fade-in keyframes */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Apply the animation to the HomeView component and its child elements */
+  .homeView, .homeView img, .homeView .services, .homeView .location {
+    animation: fadeIn 1s ease-in-out; /* 1s duration, ease-in-out timing function */
+  }
+  
