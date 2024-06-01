@@ -5,6 +5,7 @@ import Navbar from './components/navbar/Navbar';
 import Location from './components/home/location/Location';
 import Services from './components/home/services/Services';
 import ServicesView from './components/servicesView/servicesView';
+import ProductsView from './components/products/productsView';
 import HomeView from './components/home/homeView';
 
 function App() {
@@ -23,7 +24,8 @@ function App() {
     <div className="container">
       <Navbar onTabClick={handleTabClick}/>
       {activeView === 'home' ? <HomeView onTabClick={handleTabClick}/> : 
-       <ServicesView/>}
+      activeView === 'services' ? <ServicesView onTabClick={handleTabClick}/> :
+       <ProductsView/>}
       
     </div>
   );
