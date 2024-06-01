@@ -1,10 +1,10 @@
 import './productsView.css'
 
 const ProductsView = () => {
-  const indev = false;
+  const inmain = true;
   return (
     <div className='productsView'>
-      {indev === "false" ? (
+      {inmain ? (
         <h2>Coming soon!</h2>
       ) : (
         <>

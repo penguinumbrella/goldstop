@@ -10,11 +10,12 @@ import ReactCompareImage from 'react-compare-image';
 
 const ServicesView = () => {
 
-  const indev = false;
+  const inmain = true;
 
   return (
     <div className='servicesView'>
-      {indev === "false" ? (
+      {inmain ? 
+      (
         <h2>Coming soon!</h2>
       ) : (
         <>
