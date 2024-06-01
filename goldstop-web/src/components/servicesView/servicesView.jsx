@@ -10,11 +10,19 @@ import ReactCompareImage from 'react-compare-image';
 
 const ServicesView = () => {
 
+  const indev = false;
+
   return (
     <div className='servicesView'>
+      {indev === "false" ? (
+        <h2>Coming soon!</h2>
+      ) : (
+        <>
         <h1>Before and After Slider</h1>
         <ReactCompareImage leftImage={beforeImage} rightImage={afterImage} />
-        /</div>
+        </>
+      )}
+    </div>
   )
 }
 

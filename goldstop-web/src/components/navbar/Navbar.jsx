@@ -8,6 +8,10 @@ const Navbar = ({ onTabClick }) => {
 
   const [activeTab, setActiveTab] = useState(null); // State to keep track of the active icon
 
+  const handleMailToClick = () => {
+    window.location.href = 'mailto:goldstoprepair@gmail.com';
+  };
+
   const handleTabClick = (view, event) => {
     console.log("Tab clicked", view);
     // Additional logic can be added here
@@ -36,7 +40,7 @@ const Navbar = ({ onTabClick }) => {
         </a>
       </div>
       <div className="navbar-quote">
-        <a href="mailto:goldstoprepair.com" className="quote-button">Get a Quote</a>
+        <button onClick={handleMailToClick} className="quote-button">GET A QUOTE</button>
       </div>
     </div>
   );
