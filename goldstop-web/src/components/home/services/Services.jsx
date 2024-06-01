@@ -1,7 +1,17 @@
 import React from 'react';
 import './services.css';
+import ServicesView from '../../servicesView/servicesView';
 
-const Services = () => {
+const Services = ({ onTabClick }) => {
+
+  const handleTabClick = (view, event) => {
+    console.log("Tab clicked", view);
+    // Additional logic can be added here
+    onTabClick(view);
+    const tabRect = event.target.getBoundingClientRect();
+    console.log(tabRect);
+  };
+
   return (
     <div className='services'>
       <h2>Our Services.</h2>
@@ -12,7 +22,7 @@ const Services = () => {
         </div>
         <div className="service">
             <h3>Full Soles</h3>
-            <p>Get new soles for your work boots, hiking boots, or sandals</p>
+            <p>Get new soles for your work boots, hiking boots, Birkenstock, or sandals</p>
         </div>
         <div className="service">
             <h3>Half Soles</h3>
@@ -32,14 +42,14 @@ const Services = () => {
         </div>
         <div className="service">
             <h3>Shoe Stretching</h3>
-            <p>Create more space for your toes and bunions</p>
+            <p>Bunion punching, instep, and width stretching</p>
         </div>
         <div className="service">
             <h3>Sharpening</h3>
-            <p>Knives, scissors, and gardening tools</p>
+            <p>Knives and scissors</p>
         </div>
       </div>
-      {/* <button className="see-more">See More Services</button> */}
+      {<button className="see-more" onClick={(event) => handleTabClick('services', event)}>See More Services</button>}
     </div>
   );
 }
