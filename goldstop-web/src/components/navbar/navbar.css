@@ -44,14 +44,14 @@
     margin-left: 20px; /* Add margin to the left for spacing */
   }
   
-  .navbar-quote button {
-    background-color: black;
-    color: white;
+  .navbar-quote .quote-button {
+    padding: 10px 20px;
+    background-color: #000000;
     border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 16px;
     border-radius: 25px;
+    cursor: pointer;
+    font-size: 25px;
+    color: rgb(255, 200, 0);
   }
   
   .navbar-quote button:hover {

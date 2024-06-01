@@ -12,6 +12,8 @@ const Services = ({ onTabClick }) => {
     console.log(tabRect);
   };
 
+  const indev = "false";
+
   return (
     <div className='services'>
       <h2>Our Services.</h2>
