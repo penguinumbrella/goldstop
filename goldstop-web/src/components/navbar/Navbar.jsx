@@ -29,8 +29,8 @@ const Navbar = ({ onTabClick }) => {
       <div className="navbar-tabs">
         <a href="#home" onClick={(event) => handleTabClick('home', event)}>Home</a>
 
-        { /*<a href="#services" onClick={(event) => handleTabClick('services', event)}>Services</a> */}
-        { /*<a href="#products" onClick={(event) => handleTabClick('products', event)}>Products</a> */}
+        <a href="#services" onClick={(event) => handleTabClick('services', event)}>Services</a>
+        <a href="#products" onClick={(event) => handleTabClick('products', event)}>Products</a>
       </div>
       <div className="navbar-social">
         <a href="https://www.facebook.com/goldstopshoes" target="_blank" rel="noopener noreferrer">
