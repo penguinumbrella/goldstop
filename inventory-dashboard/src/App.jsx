@@ -5,7 +5,7 @@ import PlaceholderView from './components/placeholderView';
 import SalesView from './components/sales/salesView';
 import InventoryView from './components/inventory/inventoryView';
 import DashboardView from './components/dashboard/dashboardView';
-
+import SearchBar from './components/searchBar';
 function App() {
   // State to track the active view
   const [activeView, setActiveView] = useState('placeholder'); // 'map' is the default view

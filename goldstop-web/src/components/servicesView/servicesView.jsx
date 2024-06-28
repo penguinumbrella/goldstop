@@ -8,9 +8,16 @@ import 'react-before-after-slider-component/dist/build.css';
 
 import ReactCompareImage from 'react-compare-image';
 
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import the carousel CSS
+import { Carousel } from 'react-responsive-carousel';
+
+import img1 from "../../assets/services_images/IMG_8972.png"
+import img2 from "../../assets/services_images/IMG_8974.png"
+import img3 from "../../assets/services_images/IMG_8975.png"
+
 const ServicesView = () => {
 
-  const inmain = true;
+  const inmain = false;
 
   return (
     <div className='servicesView'>
@@ -19,8 +26,36 @@ const ServicesView = () => {
         <h2>Coming soon!</h2>
       ) : (
         <>
-        <h1>Before and After Slider</h1>
-        <ReactCompareImage leftImage={beforeImage} rightImage={afterImage} />
+        <h2>Half-Sole Repair</h2>
+         <Carousel>
+            <div>
+                <img src={img1} alt="Image 1" />
+                <p className="legend">Image 1</p>
+            </div>
+            <div>
+                <img src={img2} alt="Image 2" />
+                <p className="legend">Image 2</p>
+            </div>
+            <div>
+                <img src={img3} alt="Image 3" />
+                <p className="legend">Image 3</p>
+            </div>
+        </Carousel>
+        <h2>Full-sole Repair</h2>
+         <Carousel>
+            <div>
+                <img src={img1} alt="Image 1" />
+                <p className="legend">Image 1</p>
+            </div>
+            <div>
+                <img src={img2} alt="Image 2" />
+                <p className="legend">Image 2</p>
+            </div>
+            <div>
+                <img src={img3} alt="Image 3" />
+                <p className="legend">Image 3</p>
+            </div>
+        </Carousel>
         </>
       )}
     </div>

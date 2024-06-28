@@ -1,0 +1,17 @@
+.servicesView {
+text-align: center; /* Center align content if needed */
+padding-top: 20vh;
+}
+
+.servicesView .carousel {
+    margin: auto;
+    width: 25%; /* Adjust width as needed */
+}
+
+.servicesView .carousel img {
+    max-width: 25%; /* Ensure images take up about a fourth of the width */
+    width: 10px;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Center the images */
+    margin: 0 auto;
+}

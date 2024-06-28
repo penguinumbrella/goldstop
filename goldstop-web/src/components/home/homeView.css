@@ -7,6 +7,10 @@
       opacity: 1;
     }
   }
+
+  .homeView img {
+    width: 100%;
+  }
   
   /* Apply the animation to the HomeView component and its child elements */
   .homeView, .homeView img, .homeView .services, .homeView .location {
