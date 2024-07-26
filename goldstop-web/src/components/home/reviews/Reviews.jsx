@@ -10,6 +10,9 @@ import pfp2 from '../../../assets/reviews/profilepics/pfp2.png'; // Ensure the c
 import pfp3 from '../../../assets/reviews/profilepics/pfp3.png'; // Ensure the correct path
 import pfp4 from '../../../assets/reviews/profilepics/pfp4.png'; // Ensure the correct path
 import pfp5 from '../../../assets/reviews/profilepics/pfp5.png'; // Ensure the correct path
+import pfp6 from '../../../assets/reviews/profilepics/pfp6.png'; // Ensure the correct path
+import pfp7 from '../../../assets/reviews/profilepics/pfp7.png'; // Ensure the correct path
+import pfp8 from '../../../assets/reviews/profilepics/pfp8.png'; // Ensure the correct path
 
 import border from '../../../assets/reviews/border.png'; // Empty star image
 
@@ -84,11 +87,34 @@ Top shelf business. Thank you very much!"
           rating={5}
           reviewText="Highly recommend . Not only did they beautifully make restore some vintage shoes and boots like new , they went out of their way to source some leather that they didn’t carry in store to repair a keepsake piece of jewellrey / necklace for me and it’s brand new again. Speedy , fair priced and very good quality by Geraldine and team Thank you !"
         />
+        
+
         <ReviewBubble 
-          profilePicture={pfp5}
-          customerName="C Dickson"
+                profilePicture={pfp5}
+                customerName="C Dickson"
+                rating={5}
+                reviewText="I cannot get over how great my shoes look! This place is an absolute gem! I have a pair of leather Frye boots that I have worn to death, because they are my favourites! I was literally going to toss them in the bin as they had 4 holes in the leather and were pulling apart from the sole after years of wear. As a last resort I thought I would give these guys a try! I'm so glad I did. The service was exceptional, the leather work amazing and the price reasonable. I highly recommend!"
+              />
+
+        <ReviewBubble 
+                profilePicture={pfp6}
+                customerName="Sarah Howard"
+                rating={5}
+                reviewText="Amazing service! Fixed my favourite boots which I thought were a lost cause but they fixed them and they are as good as new. Couldn’t be happier with the results"
+              />
+
+        <ReviewBubble 
+                profilePicture={pfp7}
+                customerName="James Kirwin"
+                rating={5}
+                reviewText="Wonderful people and fine craftsmanship!"
+              />
+
+<ReviewBubble 
+          profilePicture={pfp8}
+          customerName="Matt Fentiman"
           rating={5}
-          reviewText="I cannot get over how great my shoes look! This place is an absolute gem! I have a pair of leather Frye boots that I have worn to death, because they are my favourites! I was literally going to toss them in the bin as they had 4 holes in the leather and were pulling apart from the sole after years of wear. As a last resort I thought I would give these guys a try! I'm so glad I did. The service was exceptional, the leather work amazing and the price reasonable. I highly recommend!"
+          reviewText="I had a soft leather briefcase with sentimental value refurbished here. The work was done with care, creativity and thoughtfulness. The staff were friendly and professional. I would come back in a heartbeat."
         />
         {/* Add more ReviewBubble components as needed */}
       </div>
