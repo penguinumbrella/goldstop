@@ -66,7 +66,7 @@ const Services = forwardRef((props, ref) => {
           image={shoepolish}
         />
         <ServiceBubble
-          title="Shoe Stretching"
+          title="SHOE STRETCHING"
           description="Bunion punching, instep, and width stretching"
           image={fullsole}
         />
