@@ -6,6 +6,12 @@ import GoldLeaf2 from "./../../../assets/goldleaf2.png" // Import the second gol
 
 // Import your service images
 import rockClimbingShoesImg from '../../../assets/services/rockclimb.png'
+import bag from '../../../assets/services/bag.svg'
+import fullsole from '../../../assets/services/fullsole.svg'
+import knife from '../../../assets/services/knifesharpen.svg'
+import shoepolish from '../../../assets/services/shoepolish.svg'
+import stitch from '../../../assets/services/stitch.svg'
+import zipper from '../../../assets/services/zipper.svg'
 import SeeMoreServicesPng from '../../../assets/seemoreservicesblack.png'; // Adjust the import path as needed
 import arrow from "../../../assets/arrow.svg"
 
@@ -32,37 +38,42 @@ const Services = forwardRef((props, ref) => {
         <ServiceBubble
           title="Full Soles"
           description="Get new soles for your work boots, hiking boots, Birkenstock, or sandals"
-          image={rockClimbingShoesImg}
+          image={fullsole}
         />
         <ServiceBubble
           title="Half Soles"
           description="Protect your leather soles with rubber, replace worn down soles, or add soles with more tread"
-          image={rockClimbingShoesImg}
+          image={fullsole}
         />
         <ServiceBubble
           title="Heels"
           description="Replace your worn down heels"
-          image={rockClimbingShoesImg}
+          image={fullsole}
         />
         <ServiceBubble
-          title="Zipper Repair"
+          title="ZIPPER REPAIR"
           description="We can fix the zippers on your boots, coats, bags, and luggage"
-          image={rockClimbingShoesImg}
+          image={zipper}
         />
         <ServiceBubble
-          title="Shoe Cleaning & Shining"
+          title="STITCHING"
+          description="High-quality stitch repair services to mend and reinforce your items."
+          image={stitch}
+        />
+        <ServiceBubble
+          title="SHOE CLEANING & POLISHING"
           description="We can clean your sneakers and shine your dress shoes"
-          image={rockClimbingShoesImg}
+          image={shoepolish}
         />
         <ServiceBubble
           title="Shoe Stretching"
           description="Bunion punching, instep, and width stretching"
-          image={rockClimbingShoesImg}
+          image={fullsole}
         />
         <ServiceBubble
-          title="Sharpening"
+          title="KNIFE SHARPENING"
           description="Knives and scissors"
-          image={rockClimbingShoesImg}
+          image={knife}
         />
       </div>
       <div className="see-more">
