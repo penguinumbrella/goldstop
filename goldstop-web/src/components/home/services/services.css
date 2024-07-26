@@ -8,12 +8,16 @@
 /* services.css */
 
 .services {
+  background-image: url('../../../assets/services/background.png');
+  background-size: cover;
   position: relative;
   padding: 2rem;
-  background-color: transparent; /* Set background color to transparent */
+  background-color: black; /* Set background color to transparent */
   margin-top: -2rem; /* Adjust this value to move the section higher */
-  z-index: 100;
+  z-index: 200;
 }
+
+
 
 .gold-leaf {
   position: absolute;
@@ -50,6 +54,7 @@
 .service-heading img.arrow-icon {
   height: 8vh; /* Adjust the size as needed */
   width: auto;
+  mix-blend-mode: multiply; /* Applies the multiply blend mode */
   margin-right: 1rem;
 }
 
