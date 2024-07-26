@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { ChakraProvider, IconButton } from '@chakra-ui/react';
 import { AiFillFacebook, AiFillInstagram } from 'react-icons/ai';
 import { FaShoppingCart } from 'react-icons/fa';
-import logo from '../../assets/logo-top.svg';
+import logo from '../../assets/logo-top.png';
 import './navbar.css';
 
 const Navbar = ({ onTabClick }) => {
