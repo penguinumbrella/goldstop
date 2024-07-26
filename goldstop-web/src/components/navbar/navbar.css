@@ -51,7 +51,7 @@
 }
 
 .navbar-logo img {
-  width: 200px; /* Adjust size as needed */
+  width: 30vh; /* Adjust size as needed */
   height: auto; /* Maintain aspect ratio */
 }
 
@@ -73,6 +73,7 @@
      -moz-background-clip: text;
           background-clip: text;
 }
+
 
 .navbar-cart {
   margin-right: 2vw;

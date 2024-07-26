@@ -42,23 +42,29 @@ const Contact = () => {
       <div className='top'>
         <div className='contact-info'>
           <div className='item'>
-            <img src={mail} alt="" />
-            <span>goldstoprepair@gmail.com</span>
+            <a href="mailto:goldstoprepair@gmail.com">
+              <img src={mail} alt="Email" />
+              <span>goldstoprepair@gmail.com</span>
+            </a>
           </div>
           <div className='item'>
-            <img src={phone} alt="" />
-            <span>(604) 734-7477</span>
+            <a href="tel:(604) 734-7477">
+              <img src={phone} alt="Phone" />
+              <span>(604) 734-7477</span>
+            </a>
           </div>
           <div className='item'>
-            <img src={waypoint} alt="" />
-            <span>3308 Dunbar Street, Vancouver, BC V6S 2C1</span>
+            <a href="https://www.google.com/maps?q=3308+Dunbar+Street,+Vancouver,+BC+V6S+2C1" target="_blank" rel="noopener noreferrer">
+              <img src={waypoint} alt="Location" />
+              <span>3308 Dunbar Street, Vancouver, BC V6S 2C1</span>
+            </a>
           </div>
           <div className='item'>
-            <img src={schedule} alt="" />
+            <img src={schedule} alt="Schedule" />
             <span>Hours: Tuesday - Saturday 9:30AM - 5:30PM</span>
           </div>
         </div>
-        <img src={shoerepairlogo} alt="" />
+        <img src={shoerepairlogo} alt="Logo" />
       </div>
       <div className='bottom'>
         <form className='contact-form' onSubmit={handleSubmit}>
