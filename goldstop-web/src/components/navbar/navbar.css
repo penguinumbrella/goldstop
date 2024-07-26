@@ -1,4 +1,90 @@
-/* Define the fade-in keyframes */
+.navbar {
+  width: 100%;
+  height: 10vh;
+  background-image: url('../../assets/wood-background.png'); /* Replace with your wood background image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0 2vw;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-top: 1vh solid #FFEDCB;
+  font-family: 'Alegreya', serif; /* Apply Alegreya font */
+  font-size: 2vh; /* Font size */
+  font-weight: bold; /* Bold font */
+}
+
+.navbar-social {
+  display: flex;
+  gap: 1.5vw;
+}
+
+.navbar-social a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-tabs-left {
+  display: flex;
+  gap: 2vw;
+  flex: 1; /* Take up remaining space */
+  justify-content: center; /* Center align tabs */
+}
+
+.navbar-tabs-left a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5vw;
+}
+
+.navbar-logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1001;
+}
+
+.navbar-logo img {
+  width: 200px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.navbar-tabs-right {
+  display: flex;
+  gap: 2vw;
+  flex: 1; /* Take up remaining space */
+  justify-content: center; /* Center align tabs */
+}
+
+.navbar-tabs-right a {
+  text-decoration: none;
+  color: #A4867C;
+  font-size: 1.5vw;
+
+  background-color: black;
+  color: transparent;
+
+  text-shadow: 0px 1px 1px rgba(70, 65, 43, 0.74);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+}
+
+.navbar-cart {
+  margin-right: 2vw;
+}
+
+.navbar-cart a {
+  text-decoration: none;
+  color: black;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -8,67 +94,10 @@
   }
 }
 
-/* Apply the animation to the navbar and its child elements */
-.navbar, .navbar-name, .navbar-tabs a, .navbar-social a, .navbar-quote .quote-button {
-  animation: fadeIn 1s ease-in-out; /* 1s duration, ease-in-out timing function */
-}
-
-.navbar {
-  width: 100%;
-  height: 10vh; /* Adjust the height as needed, vh is viewport height */
-  background-color: rgb(255, 200, 0); /* Set the background color to yellow */
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Space out the items */
-  position: fixed; /* Fix the navbar to the top */
-  top: 0; /* Position it at the top */
-  left: 0; /* Ensure it starts from the left edge */
-  z-index: 1000; /* Ensure it stays above other content */
-  padding: 0 2vw; /* Horizontal padding based on viewport width */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
-}
-
-.navbar-name {
-  font-size: 2.5vw; /* Scalable font size */
-  font-weight: bold;
-}
-
-.navbar-tabs {
-  display: flex;
-  gap: 2vw; /* Space between tabs */
-}
-
-.navbar-tabs a {
-  text-decoration: none;
-  color: black;
-  font-size: 1.5vw; /* Scalable font size */
-}
-
-.navbar-social {
-  display: flex;
-  gap: 1.5vw; /* Space between social media icons */
-}
-
-.navbar-social a {
-  text-decoration: none;
-  color: black;
-  font-size: 2.5vw; /* Scalable font size */
-}
-
-.navbar-quote {
-  margin-right: 5vw; /* Margin on the right */
-}
-
+.navbar,
+.navbar-name,
+.navbar-tabs a,
+.navbar-social a,
 .navbar-quote .quote-button {
-  padding: 0.5em 1em; /* Padding with em units */
-  background-color: #000000;
-  border: none;
-  border-radius: 1.25em; /* Rounded corners */
-  cursor: pointer;
-  font-size: 1.25vw; /* Scalable font size */
-  color: rgb(255, 200, 0);
-}
-
-.navbar-quote .quote-button:hover {
-  background-color: darkgray;
+  animation: fadeIn 1s ease-in-out;
 }

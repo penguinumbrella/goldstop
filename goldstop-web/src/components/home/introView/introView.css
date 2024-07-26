@@ -1,0 +1,87 @@
+.introView {
+    background: url('../../../assets/homeview.png') center/cover no-repeat;
+    height: 90vh;
+    position: relative;
+    display: flex;
+  }
+  
+  .icon {
+    position: absolute;
+    top: 50vh;
+    left: 15vw;
+  }
+  .icon img {
+    width: 15vw;
+    height: auto;
+  }
+  
+  .icon {
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+  }
+  
+  .icon:hover {
+    transform: scale(1.1); /* Scale up to 110% on hover */
+  }
+  
+  .icon img {
+    width: 15vw;
+    height: auto;
+  }
+  
+  
+  .flavor-text {
+    position: absolute;
+    top: 30vh; 
+    left: 35vw;
+  }
+  
+  .left-text {
+    font-family: "Freehand", cursive; /* Replace with your desired freehand font */
+    font-size: 3rem; /* Adjust font size as needed */
+    text-align: left; /* Align text to the left */
+    margin-bottom: 0vh; /* Adjust margin as needed */
+    color: white;
+    mix-blend-mode: exclusion; /* Apply exclusion blend mode */
+  }
+  
+  .right-text {
+    font-family: "Fredericka the Great", sans-serif; /* Replace with your desired font */
+    margin-left: 15vh;
+    font-size: 4rem; /* Adjust font size as needed */
+    text-align: left; /* Align text to the left */
+    color: #F0C98C;
+    mix-blend-mode: plus-lighter; /* Apply exclusion blend mode */
+  }
+  
+  .paragraph {
+    font-family: "Reem Kufi Ink", sans-serif; /* Replace with your desired font */
+    font-size: 1rem; /* Adjust font size as needed */
+    text-align: right; /* Align text to the right */
+    margin-left: 10vh; /* Space on the right */
+    color: white;
+    max-width: 70%; /* Adjust max-width to limit the paragraph width */
+  }
+  
+  .services-button {
+    font-family: "Reem Kufi Ink", sans-serif; /* Replace with your desired font */
+    font-size: 1rem; /* Adjust font size as needed */
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem; /* Adjust margin as needed */
+    cursor: pointer;
+
+    margin-left: 60vh;
+  }
+  
+  .services-button img {
+    width: 30vh; /* Adjust icon size */
+  }
+  
+  .services-button {
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+  }
+  
+  .services-button:hover {
+    transform: scale(1.1); /* Scale up to 110% on hover */
+  }

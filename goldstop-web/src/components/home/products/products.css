@@ -1,0 +1,247 @@
+/* products.css */
+
+/* Import Slick Carousel CSS */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.products {
+    background-image: url('../../../assets/products/redpaint.png'), url('../../../assets/products/background.svg');
+    background-position: top right, center center; /* Position red paint splash and background image */
+    background-repeat: no-repeat, repeat; /* Prevent images from repeating */
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .products {
+    background-color: rgba(0, 0, 0, 0.5); /* Temporary background color for debugging */
+  }
+  
+  
+
+.contentbrand {
+    
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 80%; /* Adjust as needed */
+}
+
+.left {
+    text-align: left;
+  flex: 1;
+  padding: 20px;
+}
+
+.title {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.description {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  max-width: 80%;
+}
+
+.shop-now-button {
+  cursor: pointer;
+  width: 150px;
+  height: auto;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-scroller {
+  width: 50vw; /* 50% of viewport width */
+  max-width: 400px; /* Optional: Max width for large screens */
+  height: 50vh; /* 50% of viewport height */
+  position: relative;
+  margin: 0 auto; /* Center horizontally */
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center; /* Center slide content horizontally */
+  align-items: center; /* Center slide content vertically */
+  height: 100%; /* Ensure full height */
+}
+
+.slick-slide img {
+  max-width: 100%; /* Ensure image fits within the slide width */
+  max-height: 100%; /* Ensure image fits within the slide height */
+  object-fit: contain; /* Adjust to 'cover' if you want to fill the slide area */
+}
+
+.slick-prev, .slick-next {
+  z-index: 1;
+}
+
+.slick-prev {
+  left: -30px;
+}
+
+.slick-next {
+  right: -30px;
+}
+
+.slick-dots {
+  bottom: 10px; /* Move dots up or down as needed */
+}
+
+.slick-dots li button:before {
+  color: white;
+}
+
+.slick-dots .slick-active button:before {
+  color: #717171;
+}
+.products {
+    background-image: url('../../../assets/products/background.svg');
+    background-size: cover;
+    background-position: center;
+    height: 140vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .contentbrand {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .content {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 100vh; /* Adjust as needed */
+    position: relative; /* Ensure positioning context for the brand section */
+  }
+  
+  .left {
+    
+    text-align: left;
+    flex: 1;
+    padding: 20px;
+    position: relative; /* Position context for the brand section */
+  }
+  .left h1{
+    font-family: "Meow Script";
+    color: #DDB578;
+
+  }
+  .left p {
+    font-family: "Sulphur Point";
+    color: #ECE2D3;
+  }
+  
+  .right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Position context for the brand section */
+  }
+  
+  .image-scroller {
+    width: 50vw; /* 50% of viewport width */
+    max-width: 400px; /* Optional: Max width for large screens */
+    height: 50vh; /* 50% of viewport height */
+    position: relative;
+    margin: 0 auto; /* Center horizontally */
+  }
+  
+  .slick-slide {
+    display: flex;
+    justify-content: center; /* Center slide content horizontally */
+    align-items: center; /* Center slide content vertically */
+    height: 100%; /* Ensure full height */
+  }
+  
+  .slick-slide img {
+    max-width: 100%; /* Ensure image fits within the slide width */
+    max-height: 100%; /* Ensure image fits within the slide height */
+    object-fit: contain; /* Adjust to 'cover' if you want to fill the slide area */
+  }
+  
+  .slick-prev, .slick-next {
+    z-index: 1;
+  }
+  
+  .slick-prev {
+    left: -30px;
+  }
+  
+  .slick-next {
+    right: -30px;
+  }
+  
+  .slick-dots {
+    bottom: 10px; /* Move dots up or down as needed */
+  }
+  
+  .slick-dots li button:before {
+    color: white;
+  }
+  
+  .slick-dots .slick-active button:before {
+    color: #717171;
+  }
+  
+  .brand-section {
+    color: #D9D9D9;
+    font-family: "Sulphur Point";
+    width: 100%;
+    text-align: center;
+  }
+  
+  .brand-section .brands-title {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+  
+  .brand-logos-container {
+    overflow: hidden; /* Ensure logos don't overflow */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .brand-logos {
+    background-image: url('../../../assets/products/logos.png'); /* Adjust path as needed */
+    background-repeat: no-repeat;
+    background-size: contain; /* Adjust size to fit container */
+    width: 100%;
+    height: 100px; /* Adjust height to fit the logos */
+  }
+  
+  .more-text {
+    margin-top: 1em;
+    font-size: 1.2em;
+    color: white; /* Adjust color as needed */
+  }
+  

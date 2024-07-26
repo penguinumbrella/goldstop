@@ -1,0 +1,23 @@
+/* ShoesTable.css */
+
+.shoes-table-container {
+    margin-top: 20px;
+  }
+  
+  .shoes-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .shoes-table th,
+  .shoes-table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .shoes-table th {
+    background-color: #f2f2f2;
+  }
+  

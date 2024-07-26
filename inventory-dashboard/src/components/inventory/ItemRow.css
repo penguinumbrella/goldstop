@@ -1,0 +1,20 @@
+.item-row {
+    text-align: center;
+  }
+  
+  .item-image {
+    max-width: 50px;
+    height: auto;
+  }
+  
+  .icon {
+    cursor: pointer;
+    font-size: 20px;
+    color: #007bff;
+    margin: 0 5px;
+  }
+  
+  .icon:hover {
+    color: #0056b3;
+  }
+  

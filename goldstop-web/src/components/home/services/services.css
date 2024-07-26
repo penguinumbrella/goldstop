@@ -1,63 +1,104 @@
-/* Define the fade-in keyframes */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+/* Clearfix for floated elements */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
-/* Apply the animation to the services section and its child elements */
-.services, .services h2, .services .service, .services .see-more {
-  animation: fadeIn 1s ease-in-out; /* 1s duration, ease-in-out timing function */
-}
+/* services.css */
 
 .services {
-  width: 100%;
-  background-color: #393939;
-  overflow: hidden; /* Prevent content from overflowing */
+  position: relative;
+  padding: 2rem;
+  background-color: transparent; /* Set background color to transparent */
+  margin-top: -2rem; /* Adjust this value to move the section higher */
+  z-index: 100;
+}
 
-  h2 {
-    margin-left: 2vw; /* Convert margin to viewport units */
-    font-size: 3vw; /* Convert font size to viewport units */
-    text-align: left;
-    color: white;
-  }
+.gold-leaf {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40rem; /* Adjust the size as needed */
+  height: auto;
+  z-index: 101; /* Ensure it is on top of other elements */
+  margin-top: -5rem; /* Adjust this value to move the section higher */
+}
 
-  .service-table {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Distribute items evenly */
+.gold-leaf-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40rem; /* Adjust the size as needed */
+  height: auto;
+  z-index: 101; /* Ensure it is on top of other elements */
+  margin-bottom: -10rem; /* Adjust this value to move the section higher */
+}
 
-    .service {
-      color: white;
-      width: 20%; /* 20% width with some margin in vw */
-      border-radius: 2vw; /* Convert border-radius to viewport units */
-      padding: 2vw; /* Convert padding to viewport units */
-      margin-bottom: 2vw; /* Convert margin to viewport units */
-      
-      h3 {
-        font-size: 2vw; /* Convert font size to viewport units */
-      }
-    }
-  }
+.service-intro {
+  text-align: right;
+  width: 50%; /* Cover half the screen */
+  float: right;
+}
 
-  .see-more {
-    margin-left: 2vw; /* Convert margin to viewport units */
-    color: black;
-    width: 25vw;
-    height: 15vh; /* Convert height to viewport units */
-    font-size: 2vw; /* Convert font size to viewport units */
-    padding: 2vh 4vw; /* Convert padding to viewport units */
-    background-color: rgb(255, 200, 0);
-    border: none;
-    border-radius: 10vw; /* Convert border-radius to viewport units */
-    cursor: pointer;
-    margin-bottom: 10vh; /* Convert margin to viewport units */
-  }
+.service-heading {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
 
-  .see-more:hover {
-    background-color: rgb(255, 200, 0);
-  }
+.service-heading img.arrow-icon {
+  height: 8vh; /* Adjust the size as needed */
+  width: auto;
+  margin-right: 1rem;
+}
+
+.service-heading h2 {
+  font-family: 'Stick No Bills', sans-serif;
+  font-size: 50px;
+  margin: 0;
+}
+
+.service-intro p {
+  font-family: 'Syne Mono', sans-serif;
+  margin-top: 1rem;
+}
+
+.service-table {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 5rem; /* Add space between the flavor text and service bubbles */
+  margin-bottom: 7rem; /* Increased space to accommodate the button */
+}
+
+.service {
+  font-family: "Sync Tactile";
+  flex: 1 1 30%; /* Adjust the flex basis to prevent shrinking */
+  margin: 0.5rem;
+  padding: 1rem;
+}
+
+.see-more {
+  position: relative; /* Position it relative to its nearest positioned ancestor */
+  bottom: 1rem; /* Distance from the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Offset by half its width to center it */
+  width: 100%; /* Full width to ensure it's centered within its parent */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  z-index: 100; /* Ensure it is on top of other elements */
+}
+
+.see-more-button {
+  max-width: 400px; /* Adjust this value to make the button smaller */
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease, max-width 0.3s ease; /* Smooth transition for transform and max-width */
+}
+
+.see-more-button:hover {
+  transform: scale(1.1); /* Slightly enlarge the button */
+  max-width: 450px; /* Adjust the maximum width on hover */
 }

@@ -1,0 +1,135 @@
+/* contact.css */
+
+.contact {
+    background-color: #E4DBD0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.top {
+    font-family: 'Urbanist';
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-info {
+    font-family: 'Stylish';
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-info .item {
+    font-family: 'Urbanist';
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info .item img {
+    width: 24px;
+    height: 24px;
+}
+
+.top img {
+    max-width: 200px;
+    height: auto;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.contact-form {
+    font-family: 'Urbanist';
+    width: 50%;
+    padding: 20px;
+}
+
+.contact-form h1 {
+    font-family: 'Stylish';
+    margin-bottom: 10px;
+}
+
+.contact-form .form-group {
+    font-family: 'Urbanist';
+    margin-bottom: 15px;
+}
+
+.contact-form .form-group label {
+    font-family: 'Urbanist';
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form .form-group input::placeholder,
+.contact-form .form-group textarea::placeholder {
+    color: #999;
+}
+
+/* Updated input styles */
+.contact-form .form-group input {
+    font-family: 'Urbanist';
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-bottom: 1.2px solid #000; /* Black bottom border */
+    background-color: transparent; /* Remove background color */
+    color: #000; /* Black text color */
+    outline: none;
+    border-radius: 0; /* Remove rounded borders */
+}
+
+.contact-form .form-group input:focus {
+    border-bottom-color: #000; /* Black bottom border on focus */
+}
+
+.contact-form .form-group textarea {
+    font-family: 'Urbanist';
+    width: 100%;
+    padding: 8px;
+    border: 1.2px solid #000; /* Black box border */
+    background-color: transparent; /* Remove background color */
+    color: #000; /* Black text color */
+    height: 100px; /* Increase the height of the message container */
+    outline: none;
+    border-radius: 0; /* Remove rounded borders */
+    resize: vertical;
+}
+
+.contact-form button {
+    font-family: 'Urbanist';
+    display: block;
+    width: 50%;
+    padding: 10px;
+    border: none;
+    background-color: #E2BB7F;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #eba947;
+}
+
+.contact-text {
+    font-family: 'Urbanist';
+    text-align: center;
+    width: 40%;
+    padding: 20px;
+}
+
+.contact-text h2 {
+    font-family: 'Stylish';
+    margin-bottom: 10px;
+}
+
+.contact-text p {
+    font-family: 'Urbanist';
+    margin-bottom: 0;
+}

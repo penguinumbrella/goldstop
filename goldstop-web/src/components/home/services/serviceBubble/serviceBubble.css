@@ -1,0 +1,49 @@
+.service-wrapper {
+  border: 5px dashed rgba(139, 69, 19, 0.5); /* Semi-transparent brown dotted border */
+  border-radius: 12px; /* Rounded edges */
+  background-color: transparent; /* Transparent background */
+  margin: 1rem; /* Margin between service bubbles */
+  width: 300px; /* Fixed width for all service bubbles */
+  height: 370px; /* Fixed height for all service bubbles */
+  display: flex; /* Ensure contents are centered */
+  flex-direction: column; /* Align items in a column */
+  justify-content: flex-start; /* Start at the top */
+  align-items: center; /* Center horizontally */
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+  text-align: left; /* Text align to the left */
+  width: 100%; /* Full width of the service bubble */
+  height: 100%; /* Full height of the service bubble */
+}
+
+.service-image {
+  width: 100px; /* Adjust image width as needed */
+  height: 100px; /* Set height for the image */
+  object-fit: cover; /* Ensure the image covers the container */
+  mix-blend-mode: multiply; /* Apply multiply blend mode */
+  align-self: flex-start; /* Align the image to the left */
+  margin-left: 1rem; /* Add margin to the left for alignment */
+}
+
+.service-content {
+  font-family: "Syne Mono";
+  padding: 1rem;
+  flex: 1; /* Allow content to grow and shrink within the container */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Align text content to the left */
+}
+
+h3 {
+  font-family: "Syne Tactile";
+}
+
+h3, p {
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+}

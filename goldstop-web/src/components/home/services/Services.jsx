@@ -1,59 +1,75 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import './services.css';
-import ServicesView from '../../servicesView/servicesView';
+import ServiceBubble from './serviceBubble/serviceBubble'; // Adjust the import path as needed
+import GoldLeaf from "./../../../assets/goldleaf.png"
+import GoldLeaf2 from "./../../../assets/goldleaf2.png" // Import the second gold leaf image
 
-const Services = ({ onTabClick }) => {
+// Import your service images
+import rockClimbingShoesImg from '../../../assets/services/rockclimb.png'
+import SeeMoreServicesPng from '../../../assets/seemoreservicesblack.png'; // Adjust the import path as needed
+import arrow from "../../../assets/arrow.svg"
 
-  const handleTabClick = (view, event) => {
-    console.log("Tab clicked", view);
-    // Additional logic can be added here
-    onTabClick(view);
-    const tabRect = event.target.getBoundingClientRect();
-    console.log(tabRect);
-  };
-
-  const indev = "false";
-
+const Services = forwardRef((props, ref) => {
   return (
-    <div className='services'>
-      <h2>Our Services.</h2>
-      <div className="service-table">
-        <div className="service">
-            <h3>Rock Climbing Shoes</h3>
-            <p>Rand and half sole repairs</p>
-        </div>
-        <div className="service">
-            <h3>Full Soles</h3>
-            <p>Get new soles for your work boots, hiking boots, Birkenstock, or sandals</p>
-        </div>
-        <div className="service">
-            <h3>Half Soles</h3>
-            <p>Protect your leather soles with rubber, replace worn down soles, or add soles with more tread</p>
-        </div>
-        <div className="service">
-            <h3>Heels</h3>
-            <p>Replace your worn down heels</p>
-        </div>
-        <div className="service">
-            <h3>Zipper Repair</h3>
-            <p>We can fix the zippers on your boots, coats, bags, and luggage</p>
-        </div>
-        <div className="service">
-            <h3>Shoe Cleaning & Shining</h3>
-            <p>We can clean your sneakers and shine your dress shoes</p>
-        </div>
-        <div className="service">
-            <h3>Shoe Stretching</h3>
-            <p>Bunion punching, instep, and width stretching</p>
-        </div>
-        <div className="service">
-            <h3>Sharpening</h3>
-            <p>Knives and scissors</p>
+    <div ref={ref} className='services'>
+      <img src={GoldLeaf} alt="Gold Leaf" className="gold-leaf" />
+      <img src={GoldLeaf2} alt="Gold Leaf" className="gold-leaf-bottom" /> {/* Add the second gold leaf image */}
+      <div className='clearfix'>
+        <div className='service-intro'>
+          <div className="service-heading">
+            <img src={arrow} alt="Arrow" className="arrow-icon" />
+            <h2>OUR SERVICES</h2>
+          </div>
+          <p>We pride ourselves on providing expert shoe repair services. Our skilled craftsmen use high-quality materials and techniques to restore your favorite footwear to its original glory.</p>
         </div>
       </div>
-      <button className="see-more" onClick={(event) => handleTabClick('services', event)}>See More Services</button>
+      <div className="service-table">
+        <ServiceBubble
+          title="ROCK CLIMBING SHOES"
+          description="Expert repair and resole services to maintain the performance and durability of your climbing shoes."
+          image={rockClimbingShoesImg}
+        />
+        <ServiceBubble
+          title="Full Soles"
+          description="Get new soles for your work boots, hiking boots, Birkenstock, or sandals"
+          image={rockClimbingShoesImg}
+        />
+        <ServiceBubble
+          title="Half Soles"
+          description="Protect your leather soles with rubber, replace worn down soles, or add soles with more tread"
+          image={rockClimbingShoesImg}
+        />
+        <ServiceBubble
+          title="Heels"
+          description="Replace your worn down heels"
+          image={rockClimbingShoesImg}
+        />
+        <ServiceBubble
+          title="Zipper Repair"
+          description="We can fix the zippers on your boots, coats, bags, and luggage"
+          image={rockClimbingShoesImg}
+        />
+        <ServiceBubble
+          title="Shoe Cleaning & Shining"
+          description="We can clean your sneakers and shine your dress shoes"
+          image={rockClimbingShoesImg}
+        />
+        <ServiceBubble
+          title="Shoe Stretching"
+          description="Bunion punching, instep, and width stretching"
+          image={rockClimbingShoesImg}
+        />
+        <ServiceBubble
+          title="Sharpening"
+          description="Knives and scissors"
+          image={rockClimbingShoesImg}
+        />
+      </div>
+      <div className="see-more">
+        <img src={SeeMoreServicesPng} alt="See More Services" className="see-more-button" />
+      </div>
     </div>
   );
-}
+});
 
 export default Services;

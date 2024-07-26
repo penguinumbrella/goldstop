@@ -1,0 +1,57 @@
+.reviewBubble {
+    font-family: "Syne Mono";
+    color: #E4DBD0;
+    width: 250px; /* Adjust as needed */
+    padding: 20px 10px 10px; /* Add extra padding at the top to account for the hanging picture */
+    border-radius: 8px;
+    background-color: #4B4845;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative; /* Allow absolute positioning of the profile picture */
+  }
+  
+  .profilePicture {
+    width: 80px; /* Adjust as needed */
+    height: 80px; /* Adjust as needed */
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: -40px; /* Half of the profile picture height */
+  }
+  
+  .customerName {
+    margin-top: 50px; /* Space to ensure the name is positioned correctly below the profile picture */
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .rating {
+    width: 100%;
+    text-align: center; /* Ensure rating is centered */
+  }
+  
+  .stars {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .star {
+    width: 20px; /* Adjust as needed */
+    height: 20px; /* Adjust as needed */
+  }
+  
+  .star-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .review-text {
+    font-size: 14px;
+    margin-top: 10px; /* Add some space above the review text */
+  }
+  
