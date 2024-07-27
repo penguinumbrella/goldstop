@@ -22,7 +22,7 @@ const HomeView = ({ onTabClick }) => {
         reviewsRef={reviewsRef} 
         contactRef={contactRef} 
       />
-      <IntroView servicesRef={servicesRef} />
+      {/*<IntroView servicesRef={servicesRef} />*/}
       <Services ref={servicesRef} onTabClick={onTabClick} />
       <Products ref={productsRef} />
       <Reviews ref={reviewsRef} />

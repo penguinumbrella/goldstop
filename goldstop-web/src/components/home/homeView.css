@@ -1,5 +1,6 @@
 /* Define the fade-in keyframes */
 .homeView{
+  margin-top: 70px; /* Adjust the value as needed */
   width: 100%;
 }
 @keyframes fadeIn {
