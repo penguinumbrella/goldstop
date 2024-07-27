@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { ChakraProvider } from '@chakra-ui/react';
 import { AiFillFacebook, AiFillInstagram } from 'react-icons/ai';
 import { FaShoppingCart } from 'react-icons/fa';
@@ -7,6 +7,8 @@ import './navbar.css';
 
 const Navbar = ({ onTabClick, servicesRef, productsRef, reviewsRef, contactRef }) => {
   const [activeTab, setActiveTab] = useState(null);
+  const [isVisible, setIsVisible] = useState(true);
+  const prevScrollY = useRef(0);
 
   const handleTabClick = (ref, event) => {
     event.preventDefault();
@@ -16,9 +18,27 @@ const Navbar = ({ onTabClick, servicesRef, productsRef, reviewsRef, contactRef }
     setActiveTab(ref);
   };
 
+  const handleScroll = () => {
+    if (window.scrollY > prevScrollY.current) {
+      // Scrolling down
+      setIsVisible(false);
+    } else {
+      // Scrolling up
+      setIsVisible(true);
+    }
+    prevScrollY.current = window.scrollY;
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <ChakraProvider>
-      <div className="navbar">
+      <div className={`navbar ${isVisible ? 'visible' : 'hidden'}`}>
         <div className="navbar-social">
           <a href="https://www.facebook.com/goldstopshoes" target="_blank" rel="noopener noreferrer">
             <AiFillFacebook size="2em" />
