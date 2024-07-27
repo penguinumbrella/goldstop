@@ -1,3 +1,4 @@
+import React, { forwardRef } from 'react';
 import './reviews.css';
 import fullStar from '../../../assets/reviews/full-star.png'; // Full star image
 import emptyStar from '../../../assets/reviews/empty-star.png'; // Empty star image
@@ -18,14 +19,14 @@ import border from '../../../assets/reviews/border.png'; // Empty star image
 
 import reviewbutton from "../../../assets/reviews/writereviewbutton.svg"
 
-const Reviews = () => {
+const Reviews = forwardRef((props, ref) => {
   const rating = 4.5;
   const fullStars = Math.floor(rating);
   const partialStar = rating % 1;
   const totalStars = 5;
 
   return (
-    <div className='reviews-container'>
+    <div ref={ref} className='reviews-container'>
       <div className='border-wrapper'>
         <div className='rating-container'>
           <h2>Testimonials</h2>
@@ -100,7 +101,8 @@ Top shelf business. Thank you very much!"
                 profilePicture={pfp6}
                 customerName="Sarah Howard"
                 rating={5}
-                reviewText="Amazing service! Fixed my favourite boots which I thought were a lost cause but they fixed them and they are as good as new. Couldn’t be happier with the results"
+                reviewText="Amazing service! Fixed my favourite boots which I thought were a lost cause but
+                good as new. Couldn’t be happier with the results"
               />
 
         <ReviewBubble 
@@ -110,7 +112,7 @@ Top shelf business. Thank you very much!"
                 reviewText="Wonderful people and fine craftsmanship!"
               />
 
-<ReviewBubble 
+        <ReviewBubble 
           profilePicture={pfp8}
           customerName="Matt Fentiman"
           rating={5}
@@ -120,6 +122,6 @@ Top shelf business. Thank you very much!"
       </div>
     </div>
   );
-};
+});
 
 export default Reviews;

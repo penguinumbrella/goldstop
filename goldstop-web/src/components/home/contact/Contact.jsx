@@ -4,10 +4,10 @@ import phone from "../../../assets/contact/Phone.svg";
 import schedule from "../../../assets/contact/AiFillSchedule.svg";
 import waypoint from "../../../assets/contact/BiMap.svg";
 import shoerepairlogo from "../../../assets/contact/logo.svg";
-import { useState } from 'react';
+import { useState, forwardRef} from 'react';
 import emailjs from 'emailjs-com'; // Import emailjs
 
-const Contact = () => {
+const Contact = forwardRef((props, ref) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -38,7 +38,7 @@ const Contact = () => {
   };
 
   return (
-    <div className='contact'>
+    <div ref={ref} className='contact'>
       <div className='top'>
         <div className='contact-info'>
           <div className='item'>
@@ -133,6 +133,6 @@ const Contact = () => {
       </div>
     </div>
   );
-}
+});
 
 export default Contact;

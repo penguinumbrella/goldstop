@@ -1,3 +1,4 @@
+import React, { forwardRef } from 'react';
 import './products.css';
 import Slider from 'react-slick'; // Import react-slick
 
@@ -10,7 +11,7 @@ import image5 from '../../../assets/products/naotshoe.png';
 
 const images = [image1, image2, image3, image4, image5];
 
-const Products = () => {
+const Products = forwardRef((props, ref) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -21,7 +22,7 @@ const Products = () => {
   };
 
   return (
-    <div className='products'>
+    <div ref={ref} className='products'>
       <div className='contentbrand'>
         <div className='content'>
           <div className='left'>
@@ -54,6 +55,6 @@ const Products = () => {
       </div>
     </div>
   );
-}
+});
 
 export default Products;

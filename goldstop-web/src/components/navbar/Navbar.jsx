@@ -1,26 +1,20 @@
-import React from 'react';
-import { useState } from 'react';
-import { ChakraProvider, IconButton } from '@chakra-ui/react';
+import React, { useState } from 'react';
+import { ChakraProvider } from '@chakra-ui/react';
 import { AiFillFacebook, AiFillInstagram } from 'react-icons/ai';
 import { FaShoppingCart } from 'react-icons/fa';
 import logo from '../../assets/logo-top.png';
 import './navbar.css';
 
-const Navbar = ({ onTabClick }) => {
-
+const Navbar = ({ onTabClick, servicesRef, productsRef, reviewsRef, contactRef }) => {
   const [activeTab, setActiveTab] = useState(null);
 
-  const handleMailToClick = () => {
-    window.location.href = 'mailto:goldstoprepair@gmail.com';
+  const handleTabClick = (ref, event) => {
+    event.preventDefault();
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth' });
+    }
+    setActiveTab(ref);
   };
-
-  const handleTabClick = (view, event) => {
-    console.log("Tab clicked", view);
-    onTabClick(view);
-    setActiveTab(view);
-  };
-
-  const isTabActive = (tab) => activeTab === tab;
 
   return (
     <ChakraProvider>
@@ -34,16 +28,16 @@ const Navbar = ({ onTabClick }) => {
           </a>
         </div>
         <div className="navbar-tabs-left">
-          <a href="#home" onClick={(event) => handleTabClick('home', event)}>HOME</a>
-          <a href="#services" onClick={(event) => handleTabClick('services', event)}>SERVICES</a>
+          <a href="#home" onClick={(event) => handleTabClick(null, event)}>HOME</a>
+          <a href="#services" onClick={(event) => handleTabClick(servicesRef, event)}>SERVICES</a>
         </div>
         <div className="navbar-logo">
           <img src={logo} alt="Gold Stop Shoes and Repair Logo" />
         </div>
         <div className="navbar-tabs-right">
-          <a href="#products" onClick={(event) => handleTabClick('products', event)}>PRODUCTS</a>
-          <a href="#reviews" onClick={(event) => handleTabClick('reviews', event)}>REVIEWS</a>
-          <a href="#contact" onClick={(event) => handleTabClick('contact', event)}>CONTACT</a>
+          <a href="#products" onClick={(event) => handleTabClick(productsRef, event)}>PRODUCTS</a>
+          <a href="#reviews" onClick={(event) => handleTabClick(reviewsRef, event)}>REVIEWS</a>
+          <a href="#contact" onClick={(event) => handleTabClick(contactRef, event)}>CONTACT</a>
         </div>
         <div className="navbar-cart">
           <a href="#cart">
@@ -53,6 +47,6 @@ const Navbar = ({ onTabClick }) => {
       </div>
     </ChakraProvider>
   );
-}
+};
 
 export default Navbar;

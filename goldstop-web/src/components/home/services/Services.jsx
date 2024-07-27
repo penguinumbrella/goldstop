@@ -36,17 +36,17 @@ const Services = forwardRef((props, ref) => {
           image={rockClimbingShoesImg}
         />
         <ServiceBubble
-          title="Full Soles"
+          title="FULL SOLES"
           description="Get new soles for your work boots, hiking boots, Birkenstock, or sandals"
           image={fullsole}
         />
         <ServiceBubble
-          title="Half Soles"
+          title="HALF SOLVES"
           description="Protect your leather soles with rubber, replace worn down soles, or add soles with more tread"
           image={fullsole}
         />
         <ServiceBubble
-          title="Heels"
+          title="HEELS"
           description="Replace your worn down heels"
           image={fullsole}
         />
