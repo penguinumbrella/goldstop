@@ -39,33 +39,7 @@ const Contact = forwardRef((props, ref) => {
 
   return (
     <div ref={ref} className='contact'>
-      <div className='top'>
-        <div className='contact-info'>
-          <div className='item'>
-            <a href="mailto:goldstoprepair@gmail.com">
-              <img src={mail} alt="Email" />
-              <span>goldstoprepair@gmail.com</span>
-            </a>
-          </div>
-          <div className='item'>
-            <a href="tel:(604) 734-7477">
-              <img src={phone} alt="Phone" />
-              <span>(604) 734-7477</span>
-            </a>
-          </div>
-          <div className='item'>
-            <a href="https://www.google.com/maps?q=3308+Dunbar+Street,+Vancouver,+BC+V6S+2C1" target="_blank" rel="noopener noreferrer">
-              <img src={waypoint} alt="Location" />
-              <span>3308 Dunbar Street, Vancouver, BC V6S 2C1</span>
-            </a>
-          </div>
-          <div className='item'>
-            <img src={schedule} alt="Schedule" />
-            <span>Hours: Tuesday - Saturday 9:30AM - 5:30PM</span>
-          </div>
-        </div>
-        <img src={shoerepairlogo} alt="Logo" />
-      </div>
+      
       <div className='bottom'>
         <form className='contact-form' onSubmit={handleSubmit}>
           <h1>Contact Form</h1>
@@ -126,10 +100,37 @@ const Contact = forwardRef((props, ref) => {
           </div>
           <button type="submit">SUBMIT</button>
         </form>
-        <div className='contact-text'>
+        <div>
+        <div className='contact-info'>
+          <div className='item'>
+            <a href="mailto:goldstoprepair@gmail.com">
+              <img src={mail} alt="Email" />
+              <span>goldstoprepair@gmail.com</span>
+            </a>
+          </div>
+          <div className='item'>
+            <a href="tel:(604) 734-7477">
+              <img src={phone} alt="Phone" />
+              <span>(604) 734-7477</span>
+            </a>
+          </div>
+          <div className='item'>
+            <a href="https://www.google.com/maps?q=3308+Dunbar+Street,+Vancouver,+BC+V6S+2C1" target="_blank" rel="noopener noreferrer">
+              <img src={waypoint} alt="Location" />
+              <span>3308 Dunbar Street, Vancouver, BC V6S 2C1</span>
+            </a>
+          </div>
+          <div className='item'>
+            <img src={schedule} alt="Schedule" />
+            <span>Hours: Tuesday - Saturday 9:30AM - 5:30PM</span>
+          </div>
+          <div className='contact-text'>
           <h2>CONTACT US!</h2>
           <p>We value your feedback and are here to assist you with any comments, questions, or concerns you may have. Whether you're seeking more information about our shoe products and repair services, need assistance with an order, or have suggestions on how we can improve, please do not hesitate to reach out!</p>
         </div>
+        </div>
+        </div>
+        
       </div>
     </div>
   );

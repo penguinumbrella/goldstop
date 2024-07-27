@@ -3,8 +3,8 @@
   border-radius: 12px; /* Rounded edges */
   background-color: transparent; /* Transparent background */
   margin: 1rem; /* Margin between service bubbles */
-  width: 300px; /* Fixed width for all service bubbles */
-  height: 370px; /* Fixed height for all service bubbles */
+  width: 20vw; /* Fixed width for all service bubbles */
+  height: 50vh; /* Fixed height for all service bubbles */
   display: flex; /* Ensure contents are centered */
   flex-direction: column; /* Align items in a column */
   justify-content: flex-start; /* Start at the top */
