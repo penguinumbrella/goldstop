@@ -67,7 +67,7 @@ const Reviews = forwardRef((props, ref) => {
           profilePicture={pfp1}
           customerName="Simon Krol"
           rating={5}
-          reviewText="Exelent, super nice people, high quality workmanship. Will keep coming back!"
+          reviewText="Excellent, super nice people, high quality workmanship. Will keep coming back!"
         />
         <ReviewBubble 
           profilePicture={pfp2}
@@ -86,7 +86,7 @@ Top shelf business. Thank you very much!"
           profilePicture={pfp4}
           customerName="Deanna Richardson"
           rating={5}
-          reviewText="Highly recommend . Not only did they beautifully make restore some vintage shoes and boots like new , they went out of their way to source some leather that they didn’t carry in store to repair a keepsake piece of jewellrey / necklace for me and it’s brand new again. Speedy , fair priced and very good quality by Geraldine and team Thank you !"
+          reviewText="Highly recommend . Not only did they beautifully make restore some vintage shoes and boots like new , they went out of their way to source some leather that they didn’t carry in store to repair a keepsake piece of jewelry / necklace for me and it’s brand new again. Speedy , fair priced and very good quality by Geraldine and team Thank you !"
         />
         
 
