@@ -1,27 +1,49 @@
+/* Add this to your serviceBubble.css */
+@keyframes fadeInDrop {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}/* Remove fixed width to allow the grid to handle sizing */
 .service-wrapper {
-  border: 5px dashed rgba(139, 69, 19, 0.5); /* Semi-transparent brown dotted border */
+  border: 0.25rem dashed rgba(103, 87, 75, 0.2); /* Semi-transparent brown dotted border */
   border-radius: 12px; /* Rounded edges */
   background-color: transparent; /* Transparent background */
   margin: 1rem; /* Margin between service bubbles */
-  width: 20vw; /* Fixed width for all service bubbles */
-  height: 50vh; /* Fixed height for all service bubbles */
   display: flex; /* Ensure contents are centered */
   flex-direction: column; /* Align items in a column */
   justify-content: flex-start; /* Start at the top */
   align-items: center; /* Center horizontally */
+  width: auto; /* Let the grid handle item widths */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  mix-blend-mode: multiply; /* Apply the multiply blend mode */
+
 }
+.service-wrapper:hover {
+  opacity: 0;
+  transform: translateY(-20px) scale(1.05); /* Grow slightly on hover */
+}
+
 
 .service {
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* Align items to the left */
   text-align: left; /* Text align to the left */
-  width: 100%; /* Full width of the service bubble */
-  height: 100%; /* Full height of the service bubble */
+  font-weight: lighter;
+  justify-content: flex-start; /* Align items to the top */
+  width: 100%; /* Full width of the grid item */
+  height: 100%; /* Full height of the grid item */
+  font-size: 1.2rem;
 }
 
 .service-image {
   width: 100px; /* Adjust image width as needed */
+  
   height: 100px; /* Set height for the image */
   object-fit: cover; /* Ensure the image covers the container */
   mix-blend-mode: multiply; /* Apply multiply blend mode */
@@ -32,15 +54,16 @@
 .service-content {
   font-family: "Syne Mono";
   padding: 1rem;
-  flex: 1; /* Allow content to grow and shrink within the container */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* Align text content to the top */
   align-items: flex-start; /* Align text content to the left */
 }
 
 h3 {
   font-family: "Syne Tactile";
+  color: #7E7662;
+  font-weight: normal;
 }
 
 h3, p {

@@ -1,8 +1,4 @@
-/* Define the fade-in keyframes */
-.homeView{
-  margin-top: 70px; /* Adjust the value as needed */
-  width: 100%;
-}
+
 @keyframes fadeIn {
     from {
       opacity: 0;
@@ -11,6 +7,38 @@
       opacity: 1;
     }
   }
+
+  /* Clearfix for floated elements */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+  .homeView {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the children if needed */
+    width: 100%; /* Ensure the parent takes full width */
+  }
+  
+  .homeView > * {
+    width: 100%; /* Ensure all children take full width */
+    max-width: 2000px; /* Optional: Set a max-width for consistent layout */
+    max-height: 20000px;
+    margin: 0 auto; /* Center children horizontally */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  
+  .services {
+    z-index: 4; /* Ensures Services appears first */
+  }
+  
+  .products {
+    z-index: 2; /* Ensures Products appears second */
+  }
+  
 
   
   /* Apply the animation to the HomeView component and its child elements */

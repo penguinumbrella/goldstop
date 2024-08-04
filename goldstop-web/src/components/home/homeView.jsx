@@ -15,6 +15,7 @@ const HomeView = ({ onTabClick }) => {
 
   return (
     <div className='homeView'>
+      {/*
       <Navbar 
         onTabClick={onTabClick} 
         servicesRef={servicesRef} 
@@ -22,11 +23,16 @@ const HomeView = ({ onTabClick }) => {
         reviewsRef={reviewsRef} 
         contactRef={contactRef} 
       />
+      */}
+      
       {/*<IntroView servicesRef={servicesRef} />*/}
       <Services ref={servicesRef} onTabClick={onTabClick} />
+      
       <Products ref={productsRef} />
-      <Reviews ref={reviewsRef} />
+      
+      {/*<Reviews ref={reviewsRef} />*/}
       <Contact ref={contactRef} />
+      
     </div>
   );
 };

@@ -1,6 +1,9 @@
 import './reviewBubble.css';
 import fullStar from '../../../../assets/reviews/starbasic.svg'; // Full star image
 import emptyStar from '../../../../assets/reviews/empty-star.png'; // Empty star image
+import quote from "../../../../assets/reviews/GoQuote.png"
+import quotebottom from "../../../../assets/reviews/GoQuotebottom.png"
+
 
 const ReviewBubble = ({ profilePicture, customerName, rating, reviewText }) => {
   // Ensure rating is a valid number between 0 and 5
@@ -11,6 +14,8 @@ const ReviewBubble = ({ profilePicture, customerName, rating, reviewText }) => {
 
   return (
     <div className='reviewBubble'>
+      <img src={quote} alt='Quote Top' className='quote-top' />
+      <img src={quotebottom} alt='Quote Bottom' className='quote-bottom' />
       <img src={profilePicture} alt='Profile' className='profilePicture' />
       <div className='customerName'>{customerName}</div>
       <div className='rating'>

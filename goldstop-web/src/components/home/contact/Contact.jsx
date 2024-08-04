@@ -40,7 +40,7 @@ const Contact = forwardRef((props, ref) => {
   return (
     <div ref={ref} className='contact'>
       
-      <div className='bottom'>
+      <div className='bottom-contact'>
         <form className='contact-form' onSubmit={handleSubmit}>
           <h1>Contact Form</h1>
           <h2>* Marked as Important</h2>

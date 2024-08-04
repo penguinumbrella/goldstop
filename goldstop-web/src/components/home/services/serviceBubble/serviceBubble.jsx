@@ -1,9 +1,18 @@
-import React from 'react';
-import './serviceBubble.css'; // Create and style this CSS file as needed
+import React, { useState, useEffect } from 'react';
+import './serviceBubble.css';
 
-const ServiceBubble = ({ title, description, image }) => {
+const ServiceBubble = ({ title, description, image, delay }) => {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setVisible(true);
+    }, delay);
+    return () => clearTimeout(timer);
+  }, [delay]);
+
   return (
-    <div className="service-wrapper">
+    <div className={`service-wrapper ${visible ? 'fade-in' : ''}`}>
       <div className="service">
         <img src={image} alt={title} className="service-image" />
         <div className="service-content">
@@ -11,7 +20,6 @@ const ServiceBubble = ({ title, description, image }) => {
           <p>{description}</p>
         </div>
       </div>
-      
     </div>
   );
 };

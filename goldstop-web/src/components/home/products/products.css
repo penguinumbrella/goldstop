@@ -1,32 +1,40 @@
-/* products.css */
-
-/* Import Slick Carousel CSS */
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
 .products {
-    background-image: url('../../../assets/products/redpaint.png'), url('../../../assets/products/background.svg');
-    background-position: top right, center center; /* Position red paint splash and background image */
-    background-repeat: no-repeat, repeat; /* Prevent images from repeating */
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
+  position: relative;
+  background-image: url('../../../assets/products/background.svg');
+  background-size: cover;
+  background-position: center;
+  height: 800px; /* Fixed height for the background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  padding: 20px; /* Adjust padding to fit border */
+  margin-top: -20px;
+}
 
-  .products {
-    background-color: rgba(0, 0, 0, 0.5); /* Temporary background color for debugging */
-  }
-  
-  
+.border-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95%;
+  height: 90%;
+  z-index: 2; /* Ensure it's in front of the background */
+  transform: translate(2.5%, 5%); /* Center horizontally and vertically */
+}
 
 .contentbrand {
-    
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensure the content takes full height of .products */
+  position: relative;
+  z-index: 2; /* Ensure content is in front of the border image */
 }
 
 .content {
@@ -34,30 +42,29 @@
   justify-content: space-between;
   align-items: center;
   width: 80%;
-  height: 80%; /* Adjust as needed */
+  height: 100%;
+  position: relative; /* Ensure positioning context for the brand section */
 }
 
 .left {
-    text-align: left;
-  flex: 1;
+  text-align: left;
+  width: auto;
+  flex: 0 0 50%; /* Grow, shrink, basis */
   padding: 20px;
+  position: relative; /* Position context for the brand section */
 }
 
-.title {
-  font-size: 2em;
-  margin-bottom: 0.5em;
+.left h1 {
+  font-family: "Meow Script";
+  color: #DDB578;
+  font-weight: 200;
+  font-size: 2.2rem;
 }
 
-.description {
-  font-size: 1.2em;
-  margin-bottom: 1em;
-  max-width: 80%;
-}
-
-.shop-now-button {
-  cursor: pointer;
-  width: 150px;
-  height: auto;
+.left p {
+  font-family: "Sulphur Point";
+  color: #ECE2D3;
+  font-size: 1.2rem;
 }
 
 .right {
@@ -65,14 +72,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative; /* Position context for the brand section */
+}
+
+.red-paint-splash {
+  position: absolute;
+  width: 120%; /* Adjust the width as needed */
+  height: 140%; /* Maintain aspect ratio */
+  z-index: 1; /* Ensure it's behind the scroller */
+  top: 50%; /* Adjust vertical position relative to the .right container */
+  right: -10%; /* Align to the right side, adjust value as needed */
+  transform: translateX(5%) translateY(-55%); /* Adjust vertical centering */
 }
 
 .image-scroller {
-  width: 50vw; /* 50% of viewport width */
-  max-width: 400px; /* Optional: Max width for large screens */
-  height: 50vh; /* 50% of viewport height */
+  width: 60%; /* Adjust the width relative to the .products container */
+  height: 60%; /* Adjust the height relative to the .products container */
+  max-width: 600px; /* Optional: Set a maximum width */
+  max-height: 400px; /* Optional: Set a maximum height */
   position: relative;
-  margin: 0 auto; /* Center horizontally */
+  margin: 0 auto; /* Center horizontally within the .right container */
+  z-index: 100; /* Ensure it's in front of the border image */
+  transform: translateX(-25%) translateY(10%); /* Adjust vertical centering */
+}
+
+@media (max-width: 768px) {
+  .image-scroller {
+    width: 80%; /* Increase width to fit better on smaller screens */
+    height: auto; /* Adjust height to maintain aspect ratio */
+    margin-left: 0; /* Reset left margin if it's causing overflow */
+    margin-right: 10px; /* Add right margin if needed */
+  }
 }
 
 .slick-slide {
@@ -90,6 +120,11 @@
 
 .slick-prev, .slick-next {
   z-index: 1;
+  width: 40px; /* Adjust the width as needed */
+  height: 40px; /* Adjust the height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slick-prev {
@@ -105,143 +140,74 @@
 }
 
 .slick-dots li button:before {
-  color: white;
+  color: #CCB27F;
 }
 
 .slick-dots .slick-active button:before {
-  color: #717171;
+  color: #CCB27F;
 }
-.products {
-    background-image: url('../../../assets/products/background.svg');
-    background-size: cover;
-    background-position: center;
-    height: 140vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .contentbrand {
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-  }
-  .content {
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    height: 100vh; /* Adjust as needed */
-    position: relative; /* Ensure positioning context for the brand section */
-  }
-  
-  .left {
-    
-    text-align: left;
-    flex: 1;
-    padding: 20px;
-    position: relative; /* Position context for the brand section */
-  }
-  .left h1{
-    font-family: "Meow Script";
-    color: #DDB578;
+.brand-section {
+  color: #D9D9D9;
+  font-family: "Sulphur Point";
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  padding-bottom: 50px;
+}
 
-  }
-  .left p {
-    font-family: "Sulphur Point";
-    color: #ECE2D3;
-  }
+.brand-section .brands-title {
   
-  .right {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative; /* Position context for the brand section */
-  }
-  
-  .image-scroller {
-    width: 50vw; /* 50% of viewport width */
-    max-width: 400px; /* Optional: Max width for large screens */
-    height: 50vh; /* 50% of viewport height */
-    position: relative;
-    margin: 0 auto; /* Center horizontally */
-  }
-  
-  .slick-slide {
-    display: flex;
-    justify-content: center; /* Center slide content horizontally */
-    align-items: center; /* Center slide content vertically */
-    height: 100%; /* Ensure full height */
-  }
-  
-  .slick-slide img {
-    max-width: 100%; /* Ensure image fits within the slide width */
-    max-height: 100%; /* Ensure image fits within the slide height */
-    object-fit: contain; /* Adjust to 'cover' if you want to fill the slide area */
-  }
-  
-  .slick-prev, .slick-next {
-    z-index: 1;
-  }
-  
-  .slick-prev {
-    left: -30px;
-  }
-  
-  .slick-next {
-    right: -30px;
-  }
-  
-  .slick-dots {
-    bottom: 10px; /* Move dots up or down as needed */
-  }
-  
-  .slick-dots li button:before {
-    color: white;
-  }
-  
-  .slick-dots .slick-active button:before {
-    color: #717171;
-  }
-  
-  .brand-section {
-    color: #D9D9D9;
-    font-family: "Sulphur Point";
-    width: 100%;
-    text-align: center;
-  }
-  
-  .brand-section .brands-title {
-    font-size: 1.5em;
-    margin-bottom: 1em;
-  }
-  
-  .brand-logos-container {
-    overflow: hidden; /* Ensure logos don't overflow */
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .brand-logos {
-    background-image: url('../../../assets/products/logos.png'); /* Adjust path as needed */
-    background-repeat: no-repeat;
-    background-size: contain; /* Adjust size to fit container */
-    width: 100%;
-    height: 100px; /* Adjust height to fit the logos */
-  }
-  
-  .more-text {
-    margin-top: 1em;
-    font-size: 1.2em;
-    color: white; /* Adjust color as needed */
-  }
-  
+}
+
+.brand-logos-container {
+  overflow: hidden; /* Ensure logos don't overflow */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.brand-logos {
+  background-image: url('../../../assets/products/logos.png'); /* Adjust path as needed */
+  background-repeat: no-repeat;
+  background-size: contain; /* Adjust size to fit container */
+  width: 80%;
+  height: 50px; /* Adjust height to fit the logos */
+}
+
+.more-text {
+  color: white; /* Adjust color as needed */
+}
+
+.shop-now-button {
+  width: 200px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 20px; /* Add some spacing above the button */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: transform 0.3s ease; /* Add a smooth transition for hover effect */
+}
+
+.shop-now-button:hover {
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.sparkle-top-left, .sparkle-bottom-left {
+  position: absolute;
+  z-index: 3; /* Ensure sparkles are in front of other elements */
+}
+
+.sparkle-top-left {
+  top: 0;
+  right: 0;
+  width: 100px; /* Adjust size as needed */
+  height: 100px; /* Adjust size as needed */
+  transform: translate(50%, -20%); /* Adjust positioning */
+}
+
+.sparkle-bottom-left {
+  bottom: 0;
+  left: 0;
+  width: 80px; /* Adjust size as needed */
+  height: 80px; /* Adjust size as needed */
+  transform: translate(-100%, 20%); /* Adjust positioning */
+}

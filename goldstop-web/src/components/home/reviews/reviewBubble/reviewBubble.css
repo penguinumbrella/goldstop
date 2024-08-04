@@ -55,3 +55,36 @@
     margin-top: 10px; /* Add some space above the review text */
   }
   
+  /* Responsive Design */
+@media (max-width: 1200px) {
+  .service {
+    flex: 1 1 45%; /* Adjust to show 2 services per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .service {
+    flex: 1 1 100%; /* Adjust to show 1 service per row on small screens */
+  }
+}
+
+/* Quote images */
+.quote-top, .quote-bottom {
+  position: absolute;
+  width: 4em;
+  height: auto;
+}
+
+.quote-top {
+  top: -1.5rem;
+  left: -1.5rem;
+  margin: 0; /* Add margin for spacing */
+  
+  
+}
+
+.quote-bottom {
+  bottom: -1.5rem;
+  right: -1.5rem;
+  margin: 0; /* Add margin for spacing */
+}

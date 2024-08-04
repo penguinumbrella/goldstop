@@ -22,10 +22,12 @@ function App() {
 
   return (
     <div className="container">
-      <Navbar onTabClick={handleTabClick}/>
+      <HomeView></HomeView>
+      
+      {/*<Navbar onTabClick={handleTabClick}/>
       {activeView === 'home' ? <HomeView onTabClick={handleTabClick}/> : 
       activeView === 'services' ? <ServicesView onTabClick={handleTabClick}/> :
-       <ProductsView/>}
+       <ProductsView/>}*/}
       
     </div>
   );

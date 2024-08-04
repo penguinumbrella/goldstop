@@ -4,17 +4,46 @@
   clear: both;
   display: table;
 }
-
-/* services.css */
-
 .services {
-  background-image: url('../../../assets/services/background.png');
-  background-size: cover;
   position: relative;
   padding: 2rem;
-  background-color: black; /* Set background color to transparent */
   margin-top: -2rem; /* Adjust this value to move the section higher */
-  z-index: 200;
+  width: 100vw; /* Ensure the section takes the full width of the screen */
+  overflow: visible; /* Ensure pseudo-elements do not overflow the container */
+  color: #382C28;
+  background: 
+    url('../../../assets/products/background.png') no-repeat center;
+  background-size: 100% 90%, 100% 100%;
+  background-blend-mode: overlay; /* Blend the gradient with the background image */
+
+  
+}
+
+.services::before, .services::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 25%;
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1; /* Place the pseudo-elements behind the content */
+  background-image: url('../../../assets/waves.svg');
+}
+
+.services::before {
+  top: 0;
+  visibility: visible;
+  background-position: top center; /* Position the top wave background */
+  background-image: url('../../../assets/wavesbottom.svg');
+}
+
+.services::after {
+  bottom: 0;
+  background-position: bottom center; /* Position the bottom wave background */
+  background-image: url('../../../assets/wavestop.svg');
+  
 }
 
 
@@ -26,22 +55,27 @@
   width: 40rem; /* Adjust the size as needed */
   height: auto;
   z-index: 101; /* Ensure it is on top of other elements */
-  margin-top: -5rem; /* Adjust this value to move the section higher */
+  margin-top: -10rem; /* Adjust this value to move the section higher */
+  img {
+    width: 20vw;
+  }
 }
 
+
 .gold-leaf-bottom {
+  overflow: visible;
   position: absolute;
   bottom: 0;
   right: 0;
   width: 40rem; /* Adjust the size as needed */
   height: auto;
-  z-index: 101; /* Ensure it is on top of other elements */
+  z-index: 100000000; /* Ensure it is on top of other elements */
   margin-bottom: -10rem; /* Adjust this value to move the section higher */
 }
 
 .service-intro {
   text-align: right;
-  width: 50%; /* Cover half the screen */
+  width: 65%; /* Cover half the screen */
   float: right;
 }
 
@@ -49,61 +83,132 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  
 }
 
 .service-heading img.arrow-icon {
-  height: 8vh; /* Adjust the size as needed */
-  width: auto;
+  width: 20vw;
+  height: auto;
   mix-blend-mode: multiply; /* Applies the multiply blend mode */
   margin-right: 1rem;
 }
 
 .service-heading h2 {
   font-family: 'Stick No Bills', sans-serif;
-  font-size: 50px;
+  font-size: 3em;
   margin: 0;
+  font-style: thin;
+  font-weight: 350;
 }
 
 .service-intro p {
   font-family: 'Syne Mono', sans-serif;
   margin-top: 1rem;
+  font-size: 1.2rem;
+  
 }
 
 .service-table {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin-top: 5rem; /* Add space between the flavor text and service bubbles */
-  margin-bottom: 7rem; /* Increased space to accommodate the button */
+  display: grid;
+  gap: 1rem; /* Space between items */
+  margin-top: 1rem; /* Space above the grid */
+  margin-bottom: 10rem; /* Space below the grid */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid layout */
 }
 
 .service {
   font-family: "Sync Tactile";
-  flex: 1 1 30%; /* Adjust the flex basis to prevent shrinking */
-  margin: 0.5rem;
+  flex: 1;
   padding: 1rem;
 }
-
+/* Ensure other components don't shift when the button grows */
 .see-more {
-  position: relative; /* Position it relative to its nearest positioned ancestor */
+  margin-top: 10vh;
+  position: absolute; /* Position it relative to its nearest positioned ancestor */
   bottom: 1rem; /* Distance from the bottom */
+  padding-top: 10vh;
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Offset by half its width to center it */
-  width: 100%; /* Full width to ensure it's centered within its parent */
+  width: auto; /* Auto width to fit the button */
   display: flex;
   justify-content: center; /* Center content horizontally */
-  z-index: 100; /* Ensure it is on top of other elements */
+  z-index: 1000000000000000000000000000;
 }
 
 .see-more-button {
-  max-width: 400px; /* Adjust this value to make the button smaller */
+  max-width: 300px; /* Adjust this value to make the button smaller */
   height: auto;
   cursor: pointer;
   transition: transform 0.3s ease, max-width 0.3s ease; /* Smooth transition for transform and max-width */
+  position: relative; /* Relative position for proper scaling */
+  z-index:  2;/* Ensure it's on top of other elements */
+  margin-bottom: 30px;
 }
 
 .see-more-button:hover {
   transform: scale(1.1); /* Slightly enlarge the button */
-  max-width: 450px; /* Adjust the maximum width on hover */
+  max-width: 350px; /* Adjust the maximum width on hover */
 }
+
+/* Prevent container elements from shifting */
+.see-more-button-container {
+  position: absolute; /* Fixes the button container in place */
+  bottom: 1rem; /* Position from the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Offset by half its width to center it */
+  width: auto; /* Auto width to fit the button */
+  z-index: 100; /* Ensure it is on top of other elements */
+}
+
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.5s ease forwards;
+}
+.rose-top-left,
+.rose-middle-right,
+.rose-bottom-left {
+  position: absolute;
+  z-index: 1; /* Ensure it is on top of other elements */
+  width: 5rem; /* Adjust the size as needed */
+  height: auto;
+  overflow: hidden;
+}
+
+.rose-top-left {
+  top: 0;
+  left: 0;
+  width: 35rem;
+  margin-top: -2rem; /* Adjust this value to move the image higher */
+  margin-left: 0rem; /* Adjust this value to move the image left */
+  filter: blur(1px);
+  overflow: hidden;
+}
+
+.rose-middle-right {
+  top: 50%;
+  right: 0;
+  width: 45rem;
+  transform: translateY(-50%); /* Center vertically */
+  margin-right: 0rem; /* Adjust this value to move the image right */
+  filter: blur(1px);
+  overflow: hidden;
+}
+
+.rose-bottom-left {
+  bottom: 0;
+  left: 0;
+  width: 40rem;
+  margin-bottom: -5rem; /* Adjust this value to move the image lower */
+  margin-left: 0rem; /* Adjust this value to move the image left */
+  filter: blur(1px);
+  overflow: hidden;
+}
+
