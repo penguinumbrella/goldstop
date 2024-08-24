@@ -6,7 +6,7 @@
   background-image: url('../../../assets/products/background.svg');
   background-size: cover;
   background-position: center;
-  height: 800px; /* Fixed height for the background */
+  height: 700px; /* Fixed height for the background */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +23,7 @@
   left: 0;
   width: 95%;
   height: 90%;
-  z-index: 2; /* Ensure it's in front of the background */
+  z-index: 1; /* Ensure it's in front of the background */
   transform: translate(2.5%, 5%); /* Center horizontally and vertically */
 }
 
@@ -50,7 +50,6 @@
   text-align: left;
   width: auto;
   flex: 0 0 50%; /* Grow, shrink, basis */
-  padding: 20px;
   position: relative; /* Position context for the brand section */
 }
 
@@ -58,13 +57,11 @@
   font-family: "Meow Script";
   color: #DDB578;
   font-weight: 200;
-  font-size: 2.2rem;
 }
 
 .left p {
   font-family: "Sulphur Point";
   color: #ECE2D3;
-  font-size: 1.2rem;
 }
 
 .right {
@@ -79,20 +76,20 @@
   position: absolute;
   width: 120%; /* Adjust the width as needed */
   height: 140%; /* Maintain aspect ratio */
-  z-index: 1; /* Ensure it's behind the scroller */
+  z-index: 0; /* Ensure it's behind the scroller */
   top: 50%; /* Adjust vertical position relative to the .right container */
   right: -10%; /* Align to the right side, adjust value as needed */
   transform: translateX(5%) translateY(-55%); /* Adjust vertical centering */
 }
 
 .image-scroller {
-  width: 60%; /* Adjust the width relative to the .products container */
+  width: 55%; /* Adjust the width relative to the .products container */
   height: 60%; /* Adjust the height relative to the .products container */
   max-width: 600px; /* Optional: Set a maximum width */
   max-height: 400px; /* Optional: Set a maximum height */
   position: relative;
   margin: 0 auto; /* Center horizontally within the .right container */
-  z-index: 100; /* Ensure it's in front of the border image */
+  z-index: 2; /* Ensure it's in front of the border image */
   transform: translateX(-25%) translateY(10%); /* Adjust vertical centering */
 }
 
@@ -165,6 +162,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .brand-logos {

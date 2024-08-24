@@ -27,7 +27,16 @@ const Contact = forwardRef((props, ref) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_iu4rr8a', 'template_g86zami', e.target, 'Ftt_GmD4OLn7-P2kJ')
+    const emailParams = {
+      name: formData.name,
+      email: formData.email,
+      phonenumber: formData.phonenumber,
+      subject: formData.subject,
+      message: formData.message,
+      reply_to: formData.email,  // Add the reply_to parameter
+    };
+
+    emailjs.send('service_iu4rr8a', 'template_g86zami', emailParams, 'Ftt_GmD4OLn7-P2kJ')
       .then((result) => {
         console.log(result.text);
         alert('Message sent successfully!');

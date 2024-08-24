@@ -70,7 +70,8 @@
   width: 40rem; /* Adjust the size as needed */
   height: auto;
   z-index: 100000000; /* Ensure it is on top of other elements */
-  margin-bottom: -10rem; /* Adjust this value to move the section higher */
+  z-index: 1; /* Ensure it is on top of other elements */
+  margin-bottom: -5rem; /* Adjust this value to move the section higher */
 }
 
 .service-intro {

@@ -23,11 +23,6 @@
   mix-blend-mode: multiply; /* Apply the multiply blend mode */
 
 }
-.service-wrapper:hover {
-  opacity: 0;
-  transform: translateY(-20px) scale(1.05); /* Grow slightly on hover */
-}
-
 
 .service {
   display: flex;
