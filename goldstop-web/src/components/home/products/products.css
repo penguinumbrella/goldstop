@@ -152,26 +152,24 @@
   font-size: 1.2em;
   padding-bottom: 50px;
 }
-
 .brand-section .brands-title {
-  
+  font-size: 24px;
+  text-align: center;
 }
 
 .brand-logos-container {
-  overflow: hidden; /* Ensure logos don't overflow */
-  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-.brand-logos {
-  background-image: url('../../../assets/products/logos.png'); /* Adjust path as needed */
-  background-repeat: no-repeat;
-  background-size: contain; /* Adjust size to fit container */
-  width: 80%;
-  height: 50px; /* Adjust height to fit the logos */
+.brand-logo {
+  max-height: 10vh; /* Adjust size as needed */
+  max-width: 12vw;
+  height: auto;
 }
+
 
 .more-text {
   color: white; /* Adjust color as needed */

@@ -13,6 +13,13 @@ import borderImage from '../../../assets/products/border.png'; // Adjust the imp
 import sparkleTopLeft from '../../../assets/products/sparkle-top-left.png'; // Adjust the import path as needed
 import sparkleBottomRight from '../../../assets/products/sparkle-bottom-right.png'; // Adjust the import path as needed
 
+import naotbrand from '../../../assets/products/naotbrand.png';
+import merrel from '../../../assets/products/merrelbrand.png';
+import mephisto from '../../../assets/products/mephistobrand.png';
+import romika from '../../../assets/products/romikabrand.png';
+import redback from '../../../assets/products/redbackbrand.png';
+import darntough from '../../../assets/products/darntoughbrand.png';
+
 const images = [image1, image2, image3, image4, image5];
 
 const Products = forwardRef((props, ref) => {
@@ -59,12 +66,15 @@ const Products = forwardRef((props, ref) => {
         <div className='brand-section'>
           <div className='brands-title'>Sporting brands from</div>
           <div className='brand-logos-container'>
-            <div className='brand-logos'></div> 
+            <img src={naotbrand} alt="Naot" className='brand-logo' />
+            <img src={merrel} alt="Merrel" className='brand-logo' />
+            <img src={mephisto} alt="Mephisto" className='brand-logo' />
+            <img src={romika} alt="Romika" className='brand-logo' />
+            <img src={redback} alt="Redback" className='brand-logo' />
+            <img src={darntough} alt="Darn Tough" className='brand-logo' />
           </div>
           <div className='more-text'>And more!</div>
-          
-        </div>
-        
+        </div>        
         
       </div>
     </div>
