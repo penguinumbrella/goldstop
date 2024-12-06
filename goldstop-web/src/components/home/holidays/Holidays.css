@@ -1,0 +1,75 @@
+.holiday-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #faf7f5;
+    background-image: url('../../../assets/snowflakes.png');
+    
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    cursor: pointer;
+    transition: height 0.3s ease, padding 0.3s ease;
+  }
+  
+  .holiday-banner.closed {
+    padding: 10px 0;
+  }
+  
+  .banner-header {
+    display: flex;
+    justify-content: space-between; /* Push content to the edges */
+    font-weight: bold;
+    color: #bf2626;
+    font-family: 'Urbanist';
+    font-size: 20px;
+    align-items: center;
+    position: relative;
+  }
+  
+  .banner-content {
+    margin-top: 10px;
+    font-size: 14px;
+    color: black;
+    font-family: 'Urbanist';
+    animation: fadeIn 0.3s ease;
+  }
+  
+  @keyframes fadeIn{
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .holiday-banner.closed {
+    padding: 10px 0;
+  }
+
+
+.exit-button {
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .exit-button:hover {
+    color: #ffdada; /* Lighten the color on hover */
+  }
+  
+  .banner-title {
+    flex: 1; /* Allow the title to take up all available space */
+    text-align: center; /* Center the text horizontally */
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+  }

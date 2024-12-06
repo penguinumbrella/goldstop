@@ -6,12 +6,14 @@ import Products from './products/Products';
 import Reviews from './reviews/Reviews';
 import Contact from './contact/Contact';
 import Navbar from '../navbar/Navbar'; // Adjust the import path as needed
+import Holidays from "./holidays/Holidays";
 
 const HomeView = ({ onTabClick }) => {
   const servicesRef = useRef(null);
   const productsRef = useRef(null);
   const reviewsRef = useRef(null);
   const contactRef = useRef(null);
+  const jobAppRef = useRef(null); // Ref for Job Posting Section
 
   return (
     <div className='homeView'>
@@ -24,6 +26,7 @@ const HomeView = ({ onTabClick }) => {
         contactRef={contactRef} 
       />
       */}
+      <Holidays />
       
       {/*<IntroView servicesRef={servicesRef} />*/}
       <Services ref={servicesRef} onTabClick={onTabClick} />
